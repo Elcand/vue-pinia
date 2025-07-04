@@ -1,6 +1,12 @@
 <template>
   <h1>Todo Store</h1>
-  {{ todoStore }}
+  <!-- {{ todoStore.name }} // state -->
+  <!-- {{ todoStore.doubleCount }} // getters -->
+
+  <div class="count">
+    <h2>Count: {{ todoStore.count }}</h2>
+  </div>
+  <button @click="todoStore.increment">+</button>
 </template>
 
 <script>
