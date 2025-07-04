@@ -1,15 +1,15 @@
-import { difineStore } from "pinia";
+import { defineStore } from "pinia";
 
-export const useTodoStore = difineStore("todo", {
-    state: () => ({
-        count: 0,
-    }),
-    getters: {
-        doubleCount: (state) => state.count * 2,
+export const useTodoStore = defineStore("todo", {
+  state: () => ({
+    count: 0,
+  }),
+  getters: {
+    doubleCount: (state) => state.count * 2,
+  },
+  actions: {
+    increment() {
+      this.count++;
     },
-    actions: {
-        increment() {
-            this.count++;
-        },
-    },
+  },
 });
